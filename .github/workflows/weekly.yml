@@ -28,6 +28,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate collectors and dashboard code
+        run: |
+          python -m unittest discover -s tests -v
+          node --check site/v4.js
       - name: Collect official evaluation sources
         run: |
           python src/monitor.py
