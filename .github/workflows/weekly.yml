@@ -1,11 +1,5 @@
 name: Weekly AI benchmark collection
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'src/**'
-      - 'site/**'
-      - '.github/workflows/weekly.yml'
   workflow_dispatch:
   schedule:
     - cron: '20 0 * * 1' # Every Monday, 09:20 Asia/Seoul
