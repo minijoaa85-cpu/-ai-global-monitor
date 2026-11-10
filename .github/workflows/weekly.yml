@@ -28,7 +28,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Collect official evaluation sources
-        env:
         run: |
           python src/monitor.py
           python src/report.py
