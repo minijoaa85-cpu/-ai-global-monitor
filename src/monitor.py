@@ -1,142 +1,133 @@
-"""Official-source weekly AI benchmark collector. Python 3.12 standard library."""
+"""V4 collector. Publishes only CC BY 4.0 Arena official leaderboard data.
+
+Artificial Analysis Free API is for INTERNAL use only and must not be
+republished to this public GitHub Pages repository. AA_API_KEY stays in
+GitHub Secrets but is deliberately not accessed by this public collector.
+"""
+from __future__ import annotations
 import datetime as dt
 import json
 import os
+import time
 from pathlib import Path
-import urllib.request
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "site" / "data"
-AA_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
-HF_URL = "https://huggingface.co/api/datasets/{}/leaderboard"
-LIVE_URL = "https://api.github.com/repos/LiveBench/new-livebench/contents/public"
-HEADERS = {"User-Agent": "AI-Global-Monitor/1.0", "Accept": "application/json"}
+API = "https://datasets-server.huggingface.co/rows"
+DATASET = "lmarena-ai/leaderboard-dataset"
+ARENA = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+# Source-defined leaderboards; avoid blending ratings across categories.
+CONFIGS = ("text", "text_style_control", "webdev", "search", "vision", "document", "agent")
+HEADERS = {"User-Agent": "AI-Global-Monitor/4.0 (public benchmark dashboard)"}
+MAX_PAGES = 12
+PAGE_SIZE = 100
 
-def fetch(url, headers=None):
-    request = urllib.request.Request(url, headers={**HEADERS, **(headers or {})})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+def http_json(url: str) -> dict:
+    error = None
+    for attempt in range(3):
+        try:
+            with urlopen(Request(url, headers=HEADERS), timeout=45) as res:
+                return json.load(res)
+        except Exception as exc:
+            error = exc
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+    raise RuntimeError(str(error))
 
-def nested(obj, path):
-    for key in path.split("."):
-        if not isinstance(obj, dict):
-            return None
-        obj = obj.get(key)
-    return obj
-
-def number(v):
-    if isinstance(v, bool) or v is None:
+def numeric(value):
+    if isinstance(value, bool) or value is None:
         return None
     try:
-        n = float(v)
-        if n != n or abs(n) > 1e12:
+        number = float(value)
+        if not -1e12 < number < 1e12 or number != number:
             return None
-        return round(n, 6)
-    except (TypeError, ValueError):
+        return round(number, 6)
+    except (ValueError, TypeError):
         return None
 
-def record(source, benchmark, model, model_id, provider, score, url,
-           version="published", unit="score", higher=True):
-    n = number(score)
-    if not model or n is None:
+def convert_arena_row(row, config):
+    """Keep official rank, uncertainty, and source publication date."""
+    if not isinstance(row, dict):
         return None
-    return dict(source=source, benchmark=benchmark, model=str(model),
-                model_id=str(model_id or model), provider=str(provider or "Unknown"),
-                score=n, source_url=url, version=str(version), unit=unit,
-                higher_is_better=higher)
+    model = row.get("model_name")
+    score_field = "score" if config == "agent" else "rating"
+    score = numeric(row.get(score_field))
+    if not isinstance(model, str) or not model.strip() or score is None:
+        return None
+    low_field = "score_ci_lower" if config == "agent" else "rating_lower"
+    high_field = "score_ci_upper" if config == "agent" else "rating_upper"
+    rank = row.get("rank")
+    try:
+        rank = int(rank) if rank is not None else None
+    except (ValueError, TypeError):
+        rank = None
+    if rank is not None and rank < 1:
+        rank = None
+    date = str(row.get("leaderboard_publish_date") or "").split("T")[0][:10]
+    category = str(row.get("category") or "overall")
+    if category.lower() in ("nan", "none"):
+        category = "overall"
+    return {
+        "source": "Arena", "benchmark": config, "category": category,
+        "model": model.strip(),
+        "model_id": config + ":" + model.strip().lower(),
+        "provider": str(row.get("organization") or "Unknown"),
+        "score": score, "unit": "IPS" if config == "agent" else "Arena rating",
+        "rank": rank, "ci_low": numeric(row.get(low_field)),
+        "ci_high": numeric(row.get(high_field)),
+        "sample_count": int(row.get("observation_count") or 0) if config == "agent" else int(row.get("vote_count") or 0),
+        "publish_date": date, "source_url": ARENA,
+        "license": "CC BY 4.0", "higher_is_better": True,
+        "version": config, "rating_method": "IPS" if config == "agent" else "Bradley-Terry",
+    }
 
-def artificial_analysis():
-    key = os.getenv("AA_API_KEY", "").strip()
-    if not key:
-        return [], "SKIPPED: AA_API_KEY not set"
-    data = fetch(AA_URL, {"x-api-key": key})
-    models = data.get("data", [])
-    if not isinstance(models, list):
-        raise ValueError("Unexpected Artificial Analysis schema")
-    specs = [
-        ("Intelligence Index", ["evaluations.artificial_analysis_intelligence_index", "evaluations.intelligence_index"], "index", True),
-        ("Coding Agent Index", ["evaluations.artificial_analysis_coding_agent_index", "evaluations.coding_agent_index"], "index", True),
-        ("Agentic Index", ["evaluations.artificial_analysis_agentic_index", "evaluations.agentic_index"], "index", True),
-        ("Median output speed", ["median_output_tokens_per_second"], "tokens/sec", True),
-        ("Input price / 1M tokens", ["pricing.price_1m_input_tokens", "pricing.input_price_per_million_tokens"], "USD/1M tokens", False),
-        ("Output price / 1M tokens", ["pricing.price_1m_output_tokens", "pricing.output_price_per_million_tokens"], "USD/1M tokens", False),
-    ]
-    rows = []
-    for model in models:
-        if not isinstance(model, dict):
-            continue
-        maker = model.get("model_creator") or {}
-        provider = maker.get("name") if isinstance(maker, dict) else str(maker)
-        for metric, paths, unit, higher in specs:
-            value = next((x for p in paths if (x := nested(model, p)) is not None), None)
-            r = record("Artificial Analysis", metric, model.get("name"),
-                       model.get("id") or model.get("slug"), provider, value,
-                       "https://artificialanalysis.ai/", "provider-current", unit, higher)
-            if r:
-                rows.append(r)
-    if not rows:
-        raise ValueError("No recognized evaluation metrics in response")
-    return rows, "OK: %d records" % len(rows)
-
-def huggingface():
-    targets = os.getenv("HF_BENCHMARK_DATASETS", "").strip()
-    if not targets:
-        return [], "SKIPPED: HF_BENCHMARK_DATASETS not configured"
-    rows = []
-    for target in targets.split(","):
-        target = target.strip()
-        if not target:
-            continue
-        data = fetch(HF_URL.format(target))
-        entries = data if isinstance(data, list) else (data.get("leaderboard") or data.get("entries") or data.get("results") or [])
-        if isinstance(entries, dict):
-            entries = entries.get("entries") or entries.get("results") or []
-        if not isinstance(entries, list):
-            raise ValueError("Unexpected HF leaderboard format for " + target)
-        for item in entries:
-            if not isinstance(item, dict):
-                continue
-            model = item.get("model_id") or item.get("model") or item.get("id")
-            if isinstance(model, dict):
-                model = model.get("id") or model.get("name")
-            metric = item.get("metric_name") or item.get("metric") or "Published score"
-            if isinstance(metric, dict):
-                metric = metric.get("name") or "Published score"
-            score = next((item.get(k) for k in ("score", "value", "metric_value", "primary_score") if item.get(k) is not None), None)
-            r = record("Hugging Face", target + " · " + str(metric), model, model,
-                       str(model).split("/")[0] if model else "", score,
-                       "https://huggingface.co/datasets/" + target)
-            if r:
-                rows.append(r)
-    if not rows:
-        raise ValueError("No HF rows found; check source leaderboard endpoint")
-    return rows, "OK: %d records" % len(rows)
-
-def livebench():
-    # Discovery only: GitHub repository content layout can change. Avoid fabricating results.
-    if os.getenv("ENABLE_LIVEBENCH", "0") != "1":
-        return [], "SKIPPED: LiveBench adapter disabled"
-    response = fetch(LIVE_URL)
-    if not isinstance(response, list):
-        raise ValueError("LiveBench directory schema changed")
-    return [], "NOT MAPPED: official public directory found; versioned score parser required"
+def get_config(config):
+    results = []
+    offset = 0
+    total = None
+    for _ in range(MAX_PAGES):
+        params = urlencode(dict(dataset=DATASET, config=config, split="latest",
+                                offset=offset, length=PAGE_SIZE))
+        response = http_json(API + "?" + params)
+        rows = response.get("rows", [])
+        if not isinstance(rows, list):
+            raise ValueError("Invalid dataset rows shape")
+        for entry in rows:
+            parsed = convert_arena_row(entry.get("row", {}), config)
+            if parsed:
+                results.append(parsed)
+        total = response.get("num_rows_total", total)
+        offset += len(rows)
+        if not rows or (isinstance(total, int) and offset >= total) or len(rows) < PAGE_SIZE:
+            break
+    if not results:
+        raise ValueError("No usable models in latest split")
+    # Most recently published rows per model/category, when a config has duplicates.
+    best = {}
+    for row in results:
+        key = (row["model_id"], row["category"])
+        if key not in best or row["publish_date"] > best[key]["publish_date"]:
+            best[key] = row
+    return list(best.values())
 
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
     now = dt.datetime.now(dt.timezone.utc)
-    week = now.date().isoformat()
-    statuses, records = {}, []
-    for name, fn in (("Artificial Analysis", artificial_analysis),
-                     ("Hugging Face", huggingface),
-                     ("LiveBench", livebench)):
+    today = now.date()
+    monday = (today - dt.timedelta(days=today.weekday())).isoformat()
+    sources, records = {}, []
+    for config in CONFIGS:
+        label = "Arena / " + config
         try:
-            rows, state = fn()
-            records.extend(rows)
-            statuses[name] = state
-        except Exception as ex:
-            statuses[name] = "ERROR: " + str(ex)[:250]
-    # If a source fails, retain the prior working data for that same source but never
-    # display it as though fresh. Status makes freshness explicit.
+            data = get_config(config)
+            records.extend(data)
+            sources[label] = "OK: %d rows" % len(data)
+        except Exception as exc:
+            sources[label] = "ERROR: %s" % str(exc)[:240]
+    sources["Artificial Analysis"] = "INTERNAL ONLY: Free API redistribution restricted; not published"
+    sources["LiveBench"] = "NOT ENABLED: license/schema verification pending"
     path = DATA / "history.json"
     try:
         history = json.loads(path.read_text(encoding="utf-8"))
@@ -144,14 +135,30 @@ def main():
             history = []
     except (OSError, ValueError):
         history = []
-    history = [x for x in history if x.get("week") != week]
-    history.append({"week": week, "collected_at": now.isoformat(), "records": records})
-    history = sorted(history, key=lambda x: x["week"])[-104:]
+    # Rebuild from sources we are legally authorized to publish; old AA data
+    # is intentionally not copied into new public snapshots.
+    history = [h for h in history if h.get("week") != monday]
+    history = [{
+        "week": h["week"], "collected_at": h.get("collected_at"),
+        "records": [r for r in h.get("records", [])
+                    if r.get("source") == "Arena" and r.get("license") == "CC BY 4.0"]
+    } for h in history if isinstance(h, dict) and h.get("week")]
+    if records:
+        history.append(dict(week=monday, collected_at=now.isoformat(), records=records))
+    history = sorted(history, key=lambda h: h["week"])[-104:]
+    status = {
+        "version": "4.0", "week": monday, "collected_at": now.isoformat(),
+        "sources": sources, "published_records": len(records),
+        "license_note": "Arena dataset CC BY 4.0, attribution required. AA Free API data is not published.",
+    }
     path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    status = {"week": week, "collected_at": now.isoformat(), "sources": statuses}
     (DATA / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(status, ensure_ascii=False, indent=2))
-    print("Collected records:", len(records))
+    print("Published Arena rows:", len(records))
+    # An entirely failed official source pull should fail the Action, rather than
+    # silently showing the previous data as fresh.
+    if not records:
+        raise SystemExit("No permitted fresh benchmark records collected; see source errors.")
 
 if __name__ == "__main__":
     main()
