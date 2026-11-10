@@ -1,9 +1,18 @@
 {
-  "week": "2026-11-10",
-  "collected_at": "2026-11-10T14:56:14.648184+00:00",
+  "version": "4.0",
+  "week": "2026-11-09",
+  "collected_at": "2026-11-10T15:06:03.393926+00:00",
   "sources": {
-    "Artificial Analysis": "OK: 295 records",
-    "Hugging Face": "SKIPPED: HF_BENCHMARK_DATASETS not configured",
-    "LiveBench": "SKIPPED: LiveBench adapter disabled"
-  }
+    "Arena / text": "OK: 1200 rows",
+    "Arena / text_style_control": "OK: 1200 rows",
+    "Arena / webdev": "OK: 659 rows",
+    "Arena / search": "OK: 42 rows",
+    "Arena / vision": "ERROR: HTTP Error 429: Too Many Requests",
+    "Arena / document": "ERROR: HTTP Error 429: Too Many Requests",
+    "Arena / agent": "ERROR: HTTP Error 429: Too Many Requests",
+    "Artificial Analysis": "INTERNAL ONLY: Free API redistribution restricted; not published",
+    "LiveBench": "NOT ENABLED: license/schema verification pending"
+  },
+  "published_records": 3101,
+  "license_note": "Arena dataset CC BY 4.0, attribution required. AA Free API data is not published."
 }
