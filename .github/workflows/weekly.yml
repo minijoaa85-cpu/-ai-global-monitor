@@ -8,6 +8,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '20 0 * * 1' # Every Monday, 09:20 Asia/Seoul
+concurrency:
+  group: pages
+  cancel-in-progress: false
 permissions:
   contents: write
   pages: write
@@ -26,9 +29,6 @@ jobs:
           python-version: '3.12'
       - name: Collect official evaluation sources
         env:
-          AA_API_KEY: ${{ secrets.AA_API_KEY }}
-          HF_BENCHMARK_DATASETS: ${{ vars.HF_BENCHMARK_DATASETS }}
-          ENABLE_LIVEBENCH: '0'
         run: |
           python src/monitor.py
           python src/report.py
