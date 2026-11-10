@@ -1,18 +1,18 @@
 {
   "version": "4.0",
   "week": "2026-11-09",
-  "collected_at": "2026-11-10T15:06:03.393926+00:00",
+  "collected_at": "2026-11-10T15:09:00.556774+00:00",
   "sources": {
-    "Arena / text": "OK: 1200 rows",
-    "Arena / text_style_control": "OK: 1200 rows",
-    "Arena / webdev": "OK: 659 rows",
+    "Arena / text": "OK: 100 rows",
+    "Arena / text_style_control": "OK: 100 rows",
+    "Arena / webdev": "OK: 100 rows",
     "Arena / search": "OK: 42 rows",
-    "Arena / vision": "ERROR: HTTP Error 429: Too Many Requests",
-    "Arena / document": "ERROR: HTTP Error 429: Too Many Requests",
-    "Arena / agent": "ERROR: HTTP Error 429: Too Many Requests",
+    "Arena / vision": "OK: 100 rows",
+    "Arena / document": "OK: 46 rows",
+    "Arena / agent": "OK: 57 rows",
     "Artificial Analysis": "INTERNAL ONLY: Free API redistribution restricted; not published",
     "LiveBench": "NOT ENABLED: license/schema verification pending"
   },
-  "published_records": 3101,
-  "license_note": "Arena dataset CC BY 4.0, attribution required. AA Free API data is not published."
+  "published_records": 545,
+  "license_note": "Arena CC BY 4.0; each leaderboard is a partial sample (up to 100 rows) of the latest split. AA Free API is not published."
 }
