@@ -120,14 +120,30 @@ def main():
     today = now.date()
     monday = (today - dt.timedelta(days=today.weekday())).isoformat()
     sources, records = {}, []
+    previous = []
+    try:
+        snapshots = json.loads((DATA / "history.json").read_text(encoding="utf-8"))
+        if isinstance(snapshots, list) and snapshots:
+            previous = snapshots[-1].get("records", [])
+    except (OSError, ValueError, TypeError):
+        pass
+    fresh_count = 0
+    stale_count = 0
     for config in CONFIGS:
         label = "Arena / " + config
         try:
             data = get_config(config)
             records.extend(data)
-            sources[label] = "OK: %d rows" % len(data)
+            fresh_count += len(data)
+            sources[label] = "OK: %d fresh rows" % len(data)
         except Exception as exc:
-            sources[label] = "ERROR: %s" % str(exc)[:240]
+            old = [dict(r, stale=True) for r in previous
+                   if r.get("source") == "Arena" and r.get("benchmark") == config
+                   and r.get("license") == "CC BY 4.0"]
+            records.extend(old)
+            stale_count += len(old)
+            sources[label] = ("ERROR: %s (retained %d stale rows)" %
+                              (str(exc)[:160], len(old)))
     sources["Artificial Analysis"] = "INTERNAL ONLY: Free API redistribution restricted; not published"
     sources["LiveBench"] = "NOT ENABLED: license/schema verification pending"
     path = DATA / "history.json"
@@ -151,6 +167,7 @@ def main():
     status = {
         "version": "4.0", "week": monday, "collected_at": now.isoformat(),
         "sources": sources, "published_records": len(records),
+        "fresh_records": fresh_count, "stale_records": stale_count,
         "license_note": "Arena CC BY 4.0; each leaderboard is a partial sample (up to 100 rows) of the latest split. AA Free API is not published.",
     }
     path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -159,8 +176,8 @@ def main():
     print("Published Arena rows:", len(records))
     # An entirely failed official source pull should fail the Action, rather than
     # silently showing the previous data as fresh.
-    if not records:
-        raise SystemExit("No permitted fresh benchmark records collected; see source errors.")
+    if not fresh_count:
+        raise SystemExit("No fresh benchmark records collected; see source errors.")
 
 if __name__ == "__main__":
     main()
