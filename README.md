@@ -1,35 +1,64 @@
-# Global AI Benchmark Monitor
+# Global AI Observatory V4.0
 
-공식 출처별 생성형 AI 모델 벤치마크 점수를 주간 수집하여 모델 순위와 장기 추세를 비교하는 개인용 웹 대시보드입니다.
+실제 글로벌 생성형 AI 성능 리더보드를 주간 수집하고, 모바일 웹사이트 및 한국어 HTML 보고서로 발행하는 개인 관리형 플랫폼입니다.
 
-## 배포
-1. GitHub 저장소 **Settings → Pages → Build and deployment → Source** 에서 **GitHub Actions**를 선택하세요.
-2. **Actions → Publish AI benchmark dashboard → Run workflow** 에서 초기 배포를 실행할 수 있습니다. main에 site 폴더 변경이 발생하면 다시 배포됩니다.
-3. 배포 주소: https://minijoaa85-cpu.github.io/-ai-global-monitor/
-4. **Actions → Weekly AI benchmark collection → Run workflow** 를 눌러 최초 수집을 실행하세요.
-5. Actions의 녹색 체크 표시와 대시보드의 "평가기관 연결 상태"를 확인하세요.
+## 실제 웹사이트
+https://minijoaa85-cpu.github.io/-ai-global-monitor/
 
-## API 설정 (중요)
-- Artificial Analysis: Settings → Secrets and variables → Actions → Secrets → New repository secret. 이름 `AA_API_KEY`로 API 키를 등록하세요. **비밀 키를 코드/채팅에 넣지 마세요.**
-- Hugging Face: Actions Variables에 `HF_BENCHMARK_DATASETS` 를 추가할 수 있으나, 실제 데이터셋이 leaderboard endpoint를 제공하는지 별도 확인이 필요합니다.
-- LiveBench: 현재 어댑터는 공식 자료 구조 확인을 위한 탐색 단계로 실제 점수 수집은 **미구현**입니다. 실패나 미구현을 성공으로 표시하지 않습니다.
+## V4 기능
+- [x] 공식 Arena 리더보드 (text, text_style_control, webdev, search, vision, document, agent) — 공개 데이터셋 CC BY 4.0
+- [x] 공식 순위, 95% 신뢰구간, 표본 수, 발표 날짜 보존
+- [x] 분야별 모델 TOP 10, 검색, 모델 최대 3종 직접 비교
+- [x] 같은 평가 방식의 주간 점수 변동과 장기 추세
+- [x] 한국어 주간 보고서 `site/weekly-report.html`, CSV 다운로드
+- [x] GitHub Actions 매주 월요일 오전 9:20 (KST) 자동 수집+데이터 커밋+Pages 배포
+- [x] Python 단위 테스트 및 Node JavaScript 문법 검사
+- [x] 공개할 수 없는 라이선스 데이터 자동 게시 차단 및 장애 상태 표시
 
-## 매주 자동화
-매주 **월요일 오전 9시 20분 KST** (00:20 UTC) GitHub Actions에서 `src/monitor.py`를 실행합니다. `src/report.py`는 `site/weekly-report.html`을 생성하고 data JSON을 함께 커밋합니다. 공개 사이트에 이 파일들이 자동 반영됩니다.
+## 출처/라이선스
+**Arena 공식 리더보드 데이터**: https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset — Creative Commons Attribution 4.0 (CC BY 4.0). 공개 화면과 보고서에 출처를 표시합니다. 각 leaderboard의 점수 척도·평가 방식·신뢰구간이 달라 결합 점수는 제공하지 않습니다.
 
-## 데이터 해석
-- 비어 있는 데이터는 0점이 아니며, 실제 인증/수집이 필요합니다.
-- 서로 다른 지표를 합쳐 근거 없는 종합 순위를 만들지 않습니다.
-- 지표 버전이 달라지면 점수를 직접 비교하지 않습니다.
-- 공개 사이트에 데이터 게시 시 각 제공기관의 라이선스와 데이터 재배포 조건을 준수하세요. Artificial Analysis 무료 API의 공개 재배포는 별도 확인이 필요할 수 있습니다.
-- API 스키마/엔드포인트가 바뀌면 해당 수집기를 수정해야 합니다.
+**Artificial Analysis**: https://artificialanalysis.ai/data-api — Free API는 내부 사용 전용으로, 외부 재배포에 대한 권리가 포함되지 않습니다. 기존에 등록한 `AA_API_KEY`는 GitHub Secrets에 그대로 보관되지만 V4 공개 수집기는 의도적으로 이 키를 호출하지 않으며 해당 데이터의 신규 공개 게시도 중단했습니다.
 
-## 로컬 확인
+**중요: 이전 버전이 공개 저장소에 남긴 Artificial Analysis 데이터는 현재 브랜치의 최신 파일에서는 제거되지만, 기존 Git 커밋 기록에는 남아 있을 수 있습니다. 완전히 제거하려면 별도의 히스토리 정리/재작성 또는 저장소 재생성이 필요합니다.** 정리 전에는 저장소의 과거 공개 커밋을 제3자에게 배포하지 마세요.
+
+**LiveBench**: https://livebench.github.io/ — 공개 자료의 실제 버전·파일 구조와 재배포 조건을 추가 확인할 때까지 수집을 활성화하지 않았습니다. 미구현을 성공으로 표시하지 않습니다.
+
+## 수집 데이터의 한계
+- Hugging Face Dataset Viewer `latest` split에서 분야별 **최대 100행만** 조회합니다. 전체 글로벌 모델 리더보드를 완전하게 수집한 것은 아니며, 데이터에 없는 모델이나 순위는 누락될 수 있습니다.
+- API 트래픽 제한(HTTP 429)으로 일부 분야가 누락될 수 있습니다. 이때 해당 분야는 `ERROR` 상태로 표시하고 오류를 숨기지 않습니다.
+- 동일한 평가 영역 안에서도 category별 비교만 허용하며 다른 방법론/지표를 합산하지 않습니다.
+- 매주 월요일 00:20 UTC 자동 수집. GitHub Actions 스케줄은 혼잡/비활성 상태에 따라 지연 또는 중단될 수 있습니다.
+- 일주일 내 재실행은 동일 주차 스냅샷을 최신 값으로 교체합니다. 주간 추세는 서로 다른 주차가 누적될 때 의미가 있습니다.
+- 불완전하거나 오래된 데이터는 임의로 보간하거나 0점으로 표시하지 않습니다.
+
+## 운영 방법
+1. GitHub 저장소 **Actions → Weekly AI benchmark collection → Run workflow** (수동 테스트).
+2. 녹색 체크를 확인한 뒤 **Actions 로그**에서 source 상태와 수집된 레코드를 검토합니다.
+3. 대시보드에 접속해 새로고침합니다. `site/data/status.json`에서 최신 상태 확인.
+4. **Settings → Pages → Build and deployment: GitHub Actions** 설정을 유지합니다.
+5. `Publish AI benchmark dashboard`는 필요할 때 수동 실행하는 복구용 워크플로입니다.
+6. API 키를 이 저장소의 코드나 공개 댓글에 올리지 마세요.
+
+## 로컬 테스트
+Python 3.12 이상과 Node 20 이상:
 ```bash
+python -m unittest discover -s tests -v
+node --check site/v4.js
 python src/monitor.py
 python src/report.py
 python -m http.server 8000 -d site
 ```
-http://localhost:8000 에서 확인할 수 있습니다.
+서버 실행 뒤 http://localhost:8000 에서 테스트합니다.
 
-**중요:** 프로젝트 설치와 실제 외부 API 데이터 수집 성공은 별개의 단계입니다. 데이터 수집 성공 여부는 Actions 로그 및 site/data/status.json으로 확인하세요.
+## 구조
+- `src/monitor.py`: 공식 허용 라이선스 데이터만 공개 수집
+- `src/report.py`: 주간 한국어 HTML 보고서
+- `site/index.html`, `site/v4.css`, `site/v4.js`: 모바일 관측소 대시보드
+- `site/data/`: 공개 가능한 정규화 데이터
+- `.github/workflows/weekly.yml`: 검증·주간 수집·커밋·웹 배포
+- `.github/workflows/pages.yml`: 수동 배포 복구용
+- `tests/`: 수집 파서 단위 테스트
+
+## 후속 확장
+LiveBench의 공개/재배포 조건 확인 후 공식 파일 기반 커넥터, 실제 평가 방법 버전 변경 감지, 주간 보고서 이메일 전송을 추가할 수 있습니다. 이메일 전송은 별도의 메일 인증 설정이 필요합니다.
