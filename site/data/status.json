@@ -1,0 +1,9 @@
+{
+  "week": null,
+  "collected_at": null,
+  "sources": {
+    "Artificial Analysis": "NOT RUN",
+    "LiveBench": "NOT RUN",
+    "Hugging Face": "NOT CONFIGURED"
+  }
+}
