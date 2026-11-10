@@ -123,9 +123,13 @@ def main():
     previous = []
     try:
         snapshots = json.loads((DATA / "history.json").read_text(encoding="utf-8"))
-        if isinstance(snapshots, list) and snapshots:
-            previous = snapshots[-1].get("records", [])
-    except (OSError, ValueError, TypeError):
+        if isinstance(snapshots, list):
+            for snapshot in reversed(snapshots):
+                candidate = snapshot.get("records", [])
+                if any(r.get("source") == "Arena" and r.get("license") == "CC BY 4.0" for r in candidate):
+                    previous = candidate
+                    break
+    except (OSError, ValueError, TypeError, AttributeError):
         pass
     fresh_count = 0
     stale_count = 0
