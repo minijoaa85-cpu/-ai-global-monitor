@@ -36,7 +36,7 @@ function renderStats(){
  $("stat-boards").textContent=num(unique(all.map(x=>x.benchmark)).length);
  $("stat-updated").textContent=prettyDate(status.collected_at);
  $("notice").textContent=all.length
- ? "공식 Arena 공개 데이터 수집 성공 · "+num(all.length)+"건 · "+
+ ? "공식 Arena 공개 데이터 "+num(all.length)+"건 (최신 "+num(status.fresh_records??all.length)+"건 / 이전 수집값 "+num(status.stale_records??0)+"건) · "+
    "평가 분야마다 점수 체계와 표본 규모가 다릅니다."
  : "표시할 공개 평가 데이터가 없습니다. 수집 실행 로그에서 오류를 확인하세요.";
 }
@@ -59,7 +59,7 @@ function rowHtml(r){
  '<span class="'+(d>0?"up":d<0?"down":"muted")+'">'+(d>0?"+":"")+num(d)+'</span>';
  const ci=r.ci_low!=null&&r.ci_high!=null?num(r.ci_low)+" – "+num(r.ci_high):"—";
  return '<tr><td><span class="rank">'+safe(r.rank??"—")+'</span></td>'+
- '<td class="model">'+safe(r.model)+'<span class="provider">'+safe(r.provider)+'</span></td>'+
+ '<td class="model">'+safe(r.model)+(r.stale?' <span class="muted">(이전 수집값)</span>':'')+'<span class="provider">'+safe(r.provider)+'</span></td>'+
  '<td><strong>'+num(r.score)+'</strong></td><td>'+ci+'</td><td>'+change+'</td><td>'+safe(r.publish_date||"—")+'</td></tr>';
 }
 function renderRanking(){
