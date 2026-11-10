@@ -10,8 +10,13 @@ on:
     - cron: '20 0 * * 1' # Every Monday, 09:20 Asia/Seoul
 permissions:
   contents: write
+  pages: write
+  id-token: write
 jobs:
   collect:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
@@ -36,3 +41,12 @@ jobs:
             git commit -m "data: weekly official benchmark snapshot"
             git push
           fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload refreshed dashboard
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+      - name: Deploy refreshed dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
