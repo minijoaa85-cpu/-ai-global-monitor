@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'src/**'
+      - 'site/**'
       - '.github/workflows/weekly.yml'
   workflow_dispatch:
   schedule:
