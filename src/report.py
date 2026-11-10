@@ -9,9 +9,10 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"site"/"data"
 history=json.loads((DATA/"history.json").read_text(encoding="utf-8"))
 status=json.loads((DATA/"status.json").read_text(encoding="utf-8"))
-latest=history[-1] if history else {"records":[],"week":"—"}
+valid=[h for h in history if any(r.get("source")=="Arena" for r in h.get("records",[]))]
+latest=valid[-1] if valid else {"records":[],"week":"—"}
 rows=[r for r in latest.get("records",[]) if r.get("source")=="Arena"]
-prev=history[-2].get("records",[]) if len(history)>1 else []
+prev=valid[-2].get("records",[]) if len(valid)>1 else []
 past={(r.get("benchmark"),r.get("category"),r.get("model_id"),r.get("version")):r
       for r in prev}
 groups=defaultdict(list)
