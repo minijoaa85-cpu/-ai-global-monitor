@@ -12,7 +12,7 @@ function setOptions(el,values,format,selected,includeAll=false){
 }
 function latest(){return history.length ? history[history.length-1] : {week:null,records:[]}}
 function sourceRows(){return all.filter(r=>r.source==="Arena"&&r.benchmark===board)}
-function scoped(){return sourceRows().filter(r=>category==="*"||r.category===category)}
+function scoped(){return sourceRows().filter(r=>r.category===category)}
 function ranked(){return scoped().sort((a,b)=>{
  const ar=a.rank,br=b.rank;
  return ar!=null&&br!=null?ar-br:ar!=null?-1:br!=null?1:b.score-a.score;
@@ -49,7 +49,7 @@ function selectBoard(){
 }
 function selectCategory(){
  const cats=unique(sourceRows().map(r=>r.category)).sort((a,b)=>a==="overall"?-1:b==="overall"?1:a.localeCompare(b));
- setOptions($("category"),cats,v=>v==="overall"?"전체 평가":v,category,true);
+ setOptions($("category"),cats,v=>v==="overall"?"전체 평가":v,category,false);
  category=$("category").value;
  renderAll();
 }
@@ -67,7 +67,7 @@ function renderRanking(){
  $("rankings").innerHTML=data.length?data.slice(0,10).map(rowHtml).join("")
  : '<tr><td colspan="6" class="muted">이 조건의 평가 데이터가 없습니다.</td></tr>';
  const count=data.reduce((a,x)=>a+(Number(x.sample_count)||0),0);
- $("rank-foot").textContent="현재 "+(labels[board]||board)+" / "+(category==="*"?"전체 세부 부문":category)+
+ $("rank-foot").textContent="현재 "+(labels[board]||board)+" / "+(category)+
  " · 전체 "+data.length+"개 모델 · 공식 발표 점수 · 발표 시점과 수집 시점은 다를 수 있습니다.";
 }
 function renderCompareOptions(){
@@ -145,7 +145,7 @@ async function init(){
   renderStats();renderSources();selectBoard();
  }catch(error){$("notice").textContent="데이터를 불러오지 못했습니다: "+error.message;renderSources();}
 }
-$("board").addEventListener("change",()=>{board=$("board").value;category="*";chosen=[];selectCategory()});
+$("board").addEventListener("change",()=>{board=$("board").value;category="";chosen=[];selectCategory()});
 $("category").addEventListener("change",()=>{category=$("category").value;chosen=[];renderAll()});
 $("search").addEventListener("input",()=>{term=$("search").value.trim();chosen=[];renderAll()});
 $("export").addEventListener("click",exportCSV);
