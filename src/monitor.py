@@ -21,7 +21,7 @@ ARENA = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
 # Source-defined leaderboards; avoid blending ratings across categories.
 CONFIGS = ("text", "text_style_control", "webdev", "search", "vision", "document", "agent")
 HEADERS = {"User-Agent": "AI-Global-Monitor/4.0 (public benchmark dashboard)"}
-MAX_PAGES = 12
+MAX_PAGES = 1
 PAGE_SIZE = 100
 
 def http_json(url: str) -> dict:
@@ -104,6 +104,8 @@ def get_config(config):
             break
     if not results:
         raise ValueError("No usable models in latest split")
+    # Latest split sampled up to 100 rows per category to respect public API rate limits.
+    # IMPORTANT: this is a partial leaderboard, not the complete official ranking.
     # Most recently published rows per model/category, when a config has duplicates.
     best = {}
     for row in results:
@@ -149,7 +151,7 @@ def main():
     status = {
         "version": "4.0", "week": monday, "collected_at": now.isoformat(),
         "sources": sources, "published_records": len(records),
-        "license_note": "Arena dataset CC BY 4.0, attribution required. AA Free API data is not published.",
+        "license_note": "Arena CC BY 4.0; each leaderboard is a partial sample (up to 100 rows) of the latest split. AA Free API is not published.",
     }
     path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (DATA / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
