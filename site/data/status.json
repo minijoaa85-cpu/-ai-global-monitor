@@ -1,11 +1,11 @@
 {
   "version": "4.0",
   "week": "2026-11-09",
-  "collected_at": "2026-11-10T15:14:21.202598+00:00",
+  "collected_at": "2026-11-10T15:16:25.178330+00:00",
   "sources": {
-    "Arena / text": "OK: 100 rows",
-    "Arena / text_style_control": "OK: 100 rows",
-    "Arena / webdev": "OK: 100 rows",
+    "Arena / text": "ERROR: HTTP Error 502: Bad Gateway",
+    "Arena / text_style_control": "ERROR: HTTP Error 502: Bad Gateway",
+    "Arena / webdev": "ERROR: HTTP Error 503: Service Temporarily Unavailable",
     "Arena / search": "OK: 42 rows",
     "Arena / vision": "OK: 100 rows",
     "Arena / document": "OK: 46 rows",
@@ -13,6 +13,6 @@
     "Artificial Analysis": "INTERNAL ONLY: Free API redistribution restricted; not published",
     "LiveBench": "NOT ENABLED: license/schema verification pending"
   },
-  "published_records": 545,
+  "published_records": 245,
   "license_note": "Arena CC BY 4.0; each leaderboard is a partial sample (up to 100 rows) of the latest split. AA Free API is not published."
 }
