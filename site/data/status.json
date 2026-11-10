@@ -1,9 +1,9 @@
 {
-  "week": null,
-  "collected_at": null,
+  "week": "2026-11-10",
+  "collected_at": "2026-11-10T14:09:08.926762+00:00",
   "sources": {
-    "Artificial Analysis": "NOT RUN",
-    "LiveBench": "NOT RUN",
-    "Hugging Face": "NOT CONFIGURED"
+    "Artificial Analysis": "SKIPPED: AA_API_KEY not set",
+    "Hugging Face": "SKIPPED: HF_BENCHMARK_DATASETS not configured",
+    "LiveBench": "SKIPPED: LiveBench adapter disabled"
   }
 }
