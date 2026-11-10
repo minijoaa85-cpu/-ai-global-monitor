@@ -10,7 +10,7 @@ function setOptions(el,values,format,selected,includeAll=false){
   el.innerHTML=(includeAll?'<option value="*">전체 부문</option>':'')+values.map(v=>'<option value="'+safe(v)+'">'+safe(format(v))+'</option>').join("");
   el.value=values.includes(selected)?selected:(includeAll?"*":values[0]||"");
 }
-function latest(){return history.length ? history[history.length-1] : {week:null,records:[]}}
+function latest(){return [...history].reverse().find(h=>Array.isArray(h.records)&&h.records.some(r=>r.source==="Arena")) || {week:null,records:[]}}
 function sourceRows(){return all.filter(r=>r.source==="Arena"&&r.benchmark===board)}
 function scoped(){return sourceRows().filter(r=>r.category===category)}
 function ranked(){return scoped().sort((a,b)=>{
@@ -18,7 +18,9 @@ function ranked(){return scoped().sort((a,b)=>{
  return ar!=null&&br!=null?ar-br:ar!=null?-1:br!=null?1:b.score-a.score;
 })}
 function comparePast(r){
- const old=history.length>1?history[history.length-2].records:[];
+ const valid=history.filter(h=>Array.isArray(h.records)&&h.records.some(x=>x.source==="Arena"));
+ const recent=latest();
+ const old=valid.filter(h=>h.week<recent.week).at(-1)?.records||[];
  return old.find(x=>x.source===r.source && x.benchmark===r.benchmark &&
  x.category===r.category && x.version===r.version && x.model_id===r.model_id);
 }
@@ -140,7 +142,7 @@ async function init(){
   if(!a.ok||!b.ok)throw Error("데이터 파일 HTTP 상태가 정상적이지 않습니다.");
   history=await a.json();status=await b.json();
   if(!Array.isArray(history))throw Error("기록 파일 형식 오류");
-  history.sort((a,b)=>a.week.localeCompare(b.week));all=latest().records||[];
+  history.sort((a,b)=>a.week.localeCompare(b.week));all=(latest().records||[]).filter(r=>r.source==="Arena");
   if(!Array.isArray(all))throw Error("최신 스냅샷 형식 오류");
   renderStats();renderSources();selectBoard();
  }catch(error){$("notice").textContent="데이터를 불러오지 못했습니다: "+error.message;renderSources();}
