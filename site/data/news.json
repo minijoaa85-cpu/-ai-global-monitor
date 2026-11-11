@@ -1,7 +1,337 @@
 {
-  "updated_at": null,
-  "items": [],
-  "sources": {},
-  "policy": "Publisher titles and short attributed feed excerpts only; open original URL for full article",
-  "note": "Industry news does not predict weekly rank changes"
+  "updated_at": "2026-11-11T06:15:28.947372+00:00",
+  "items": [
+    {
+      "source": "OpenAI",
+      "title": "Gilbert + Tobin rethinks the business of law with AI",
+      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "category": "연구·동향",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "published_day": "2026-11-12"
+    },
+    {
+      "source": "OpenAI",
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "category": "연구·동향",
+      "published_at": "2026-11-11T08:00:00+00:00",
+      "published_day": "2026-11-11"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "GitHub App support for Enterprise Copilot seat management",
+      "summary": "Enterprise GitHub Apps can now call the enterprise-level Copilot seat management APIs to control which users and enterprise teams are assigned Copilot seats. Th…",
+      "url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+      "category": "업데이트",
+      "published_at": "2026-11-11T00:18:17+00:00",
+      "published_day": "2026-11-11"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Gemini 4 Carbon in GitHub Copilot",
+      "summary": "Gemini 4 Carbon, Google’s latest model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks, with a fo…",
+      "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+      "category": "신모델·출시",
+      "published_at": "2026-11-10T20:35:41+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot weekly releases — November 2",
+      "summary": "This week, Copilot comes to JetBrains Air and Xcode’s coding assistant, with updates to help you manage pull requests, settings, and agent sessions. GitHub Copi…",
+      "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2",
+      "category": "신모델·출시",
+      "published_at": "2026-11-10T17:43:27+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Helping caregivers use AI in everyday life",
+      "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
+      "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+      "category": "연구·동향",
+      "published_at": "2026-11-10T12:00:00+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Introducing Businesses in ChatGPT",
+      "summary": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "category": "신모델·출시",
+      "published_at": "2026-11-10T10:00:00+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Closing the AI guidance gap in education",
+      "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+      "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+      "category": "연구·동향",
+      "published_at": "2026-11-10T09:00:00+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Work at the Frontier: AI’s effect on freelance work",
+      "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
+      "url": "https://openai.com/index/ai-effect-on-freelance-work",
+      "category": "연구·동향",
+      "published_at": "2026-11-10T07:00:00+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "summary": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "url": "https://openai.com/index/cogent-security",
+      "category": "연구·동향",
+      "published_at": "2026-11-10T00:00:00+00:00",
+      "published_day": "2026-11-10"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Claude Fable 5.2 in GitHub Copilot",
+      "summary": "Claude Fable 5.2, Anthropic’s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large…",
+      "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "category": "신모델·출시",
+      "published_at": "2026-11-09T22:48:07+00:00",
+      "published_day": "2026-11-09"
+    },
+    {
+      "source": "OpenAI",
+      "title": "ChatGPT Enterprise now available in AWS Marketplace",
+      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationship…",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "category": "신모델·출시",
+      "published_at": "2026-11-09T19:00:00+00:00",
+      "published_day": "2026-11-09"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "url": "https://openai.com/index/control-room",
+      "category": "연구·동향",
+      "published_at": "2026-11-09T13:00:00+00:00",
+      "published_day": "2026-11-09"
+    },
+    {
+      "source": "OpenAI",
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "category": "연구·동향",
+      "published_at": "2026-11-09T08:00:00+00:00",
+      "published_day": "2026-11-09"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Kuken Industries searches 70 years of drawings in minutes",
+      "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly…",
+      "url": "https://openai.com/index/kuken",
+      "category": "연구·동향",
+      "published_at": "2026-11-09T08:00:00+00:00",
+      "published_day": "2026-11-09"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Copilot code review: API management and review overview updates",
+      "summary": "You can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories. Copilot’s revi…",
+      "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+      "category": "업데이트",
+      "published_at": "2026-11-07T00:30:57+00:00",
+      "published_day": "2026-11-07"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+      "summary": "The Agent adoption chart in the Copilot impact dashboard now includes Copilot Chat and the VS Code Agents window, so you can see engagement across nine Copilot…",
+      "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+      "category": "업데이트",
+      "published_at": "2026-11-06T22:20:22+00:00",
+      "published_day": "2026-11-06"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+      "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+      "url": "https://openai.com/index/partnering-with-hacktron",
+      "category": "연구·동향",
+      "published_at": "2026-11-06T08:00:00+00:00",
+      "published_day": "2026-11-06"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "category": "연구·동향",
+      "published_at": "2026-11-06T00:00:00+00:00",
+      "published_day": "2026-11-06"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Cult.fit builds operational muscle with Codex",
+      "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T20:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Australian universities are creating AI-native graduates",
+      "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+      "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T09:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Merge builds product and business tools with OpenAI technology",
+      "summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updat…",
+      "url": "https://openai.com/index/merge-builds-with-openai",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T08:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Setting a new standard for responsible AI infrastructure",
+      "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastru…",
+      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T02:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Flipsnack grows product signups with conversion optimization",
+      "summary": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.",
+      "url": "https://openai.com/ads/customers/flipsnack",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T00:45:15+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Franklin Templeton uses OpenAI to support investment research",
+      "summary": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.",
+      "url": "https://openai.com/index/franklin-templeton",
+      "category": "연구·동향",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "published_day": "2026-11-05"
+    },
+    {
+      "source": "OpenAI",
+      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+      "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
+      "url": "https://openai.com/index/openai-to-acquire-pierre",
+      "category": "연구·동향",
+      "published_at": "2026-11-04T14:30:00+00:00",
+      "published_day": "2026-11-04"
+    },
+    {
+      "source": "OpenAI",
+      "title": "A thousand fewer paths to root",
+      "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "category": "연구·동향",
+      "published_at": "2026-11-04T08:00:00+00:00",
+      "published_day": "2026-11-04"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
+      "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "category": "신모델·출시",
+      "published_at": "2026-11-04T07:00:00+00:00",
+      "published_day": "2026-11-04"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Introducing Images 2.6",
+      "summary": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "category": "신모델·출시",
+      "published_at": "2026-11-04T00:00:00+00:00",
+      "published_day": "2026-11-04"
+    },
+    {
+      "source": "OpenAI",
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "summary": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.",
+      "url": "https://openai.com/index/devrev-enterprise-self-service",
+      "category": "신모델·출시",
+      "published_at": "2026-11-04T00:00:00+00:00",
+      "published_day": "2026-11-04"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Accelerating engineering for the physical world",
+      "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "category": "연구·동향",
+      "published_at": "2026-11-03T12:00:00+00:00",
+      "published_day": "2026-11-03"
+    },
+    {
+      "source": "OpenAI",
+      "title": "How Cisco defends at machine speed with OpenAI",
+      "summary": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
+      "url": "https://openai.com/index/cisco-cyber",
+      "category": "연구·동향",
+      "published_at": "2026-11-03T08:00:00+00:00",
+      "published_day": "2026-11-03"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Heimstaden is changing residential real estate management with AI",
+      "summary": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.",
+      "url": "https://openai.com/index/heimstaden",
+      "category": "연구·동향",
+      "published_at": "2026-11-03T08:00:00+00:00",
+      "published_day": "2026-11-03"
+    },
+    {
+      "source": "OpenAI",
+      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+      "summary": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.",
+      "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+      "category": "연구·동향",
+      "published_at": "2026-11-03T00:00:00+00:00",
+      "published_day": "2026-11-03"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "category": "연구·동향",
+      "published_at": "2026-11-02T18:00:00+00:00",
+      "published_day": "2026-11-02"
+    }
+  ],
+  "sources": {
+    "OpenAI": "OK: 70 recent links",
+    "OpenAI Release Notes": "ERROR: HTTP Error 403: Forbidden",
+    "Google DeepMind": "ERROR: not well-formed (invalid token): line 1, column 0",
+    "GitHub Copilot": "OK: 6 recent links"
+  },
+  "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
+  "note": "These releases can inform future rankings but are NOT performance forecasts."
 }
