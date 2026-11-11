@@ -59,6 +59,20 @@ def describe(title,description,kind):
             "평가·성능":"AI 평가 및 성능 관련 발표입니다. 방법론과 근거는 원문에서 확인하세요.",
             "업데이트":"서비스 또는 모델 기능 변경 관련 발표입니다. 변경 범위는 원문을 확인하세요."}.get(kind,"AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.")
 
+def korean_summary(title,source,kind):
+    # Strict, title-based explanatory label: no fabricated benchmark gains or launch dates.
+    t=title.lower()
+    models=("GPT","ChatGPT","Claude","Gemini","DeepSeek","Grok","Copilot","Llama","Qwen","Mistral")
+    hit=next((m for m in models if m.lower() in t),None)
+    subject=hit+" 관련" if hit else "AI 관련"
+    if kind=="신모델·출시":
+        return "%s에서 %s 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요."%(source,subject)
+    if kind=="평가·성능":
+        return "%s의 %s 평가·성능 관련 발표입니다. 실제 순위 및 비교 근거는 원문에서 확인하세요."%(source,subject)
+    if kind=="업데이트":
+        return "%s의 %s 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요."%(source,subject)
+    return "%s에서 발표한 %s 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요."%(source,subject)
+
 def allowed_link(link,domain):
     try:
         p=urlsplit(link)
@@ -92,6 +106,7 @@ def parse_feed(raw,name,source_url,domain,now):
         kind=category(title)
         description=field("summary") or field("description")
         result.append(dict(source=name,title=title,summary=describe(title,description,kind),
+            summary_ko=korean_summary(title,name,kind),
             url=link,category=kind,published_at=date.isoformat(),published_day=date.date().isoformat()))
     return result
 
