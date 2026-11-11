@@ -5,13 +5,13 @@
  const $=id=>document.getElementById(id);
  const escape=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  const fmtDate=v=>{let d=new Date(v);return isNaN(d.getTime())?"발표일 미확인":d.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",year:"numeric",month:"short",day:"numeric"});};
- let records=[],kind="전체",publisher="전체";
+ let records=[],kind="전체",publisher="전체",days=7;
  const safeURL=s=>{try{let u=new URL(s);return u.protocol==="https:"?u.href:""}catch{return ""}};
  function render(){
-  let arr=records.filter(x=>(kind==="전체"||x.category===kind)&&(publisher==="전체"||x.source===publisher));
+  let cutoff=Date.now()-days*86400000;let arr=records.filter(x=>(kind==="전체"||x.category===kind)&&(publisher==="전체"||x.source===publisher)&&new Date(x.published_at).getTime()>=cutoff);
   $("ai-news-items").innerHTML=arr.length?arr.slice(0,16).map(item=>{
    let link=safeURL(item.url);
-   return '<article class="news-item"><div class="news-meta"><span class="news-tag">'+escape(item.category)+'</span><span>'+escape(item.source)+'</span><span>'+escape(fmtDate(item.published_at))+'</span>'+(item.stale?'<span class="news-stale">이전 수집</span>':'')+'</div><h3>'+escape(item.title)+'</h3><p>'+escape(item.summary)+'</p><a href="'+escape(link)+'" target="_blank" rel="noopener noreferrer">원문 기사 보기 ↗</a></article>';
+   return '<article class="news-item"><div class="news-meta"><span class="news-tag">'+escape(item.category)+'</span><span>'+escape(item.source)+'</span><span>'+escape(fmtDate(item.published_at))+'</span>'+(item.stale?'<span class="news-stale">이전 수집</span>':'')+'</div><h3>'+escape(item.title)+'</h3><p>'+escape(item.summary_ko||item.summary)+'</p><p class="news-original">'+escape(item.summary_ko?item.summary:"")+'</p><a href="'+escape(link)+'" target="_blank" rel="noopener noreferrer">원문 기사 보기 ↗</a></article>';
   }).join(""):'<p class="muted">현재 조건에 맞는 뉴스가 없습니다. 분야 또는 출처 필터를 바꿔 보세요.</p>';
   $("ai-news-count").textContent=arr.length+"건 표시";
  }
@@ -38,5 +38,6 @@
  }
  $("ai-news-kind").addEventListener("change",()=>{kind=$("ai-news-kind").value;render()});
  $("ai-news-source").addEventListener("change",()=>{publisher=$("ai-news-source").value;render()});
+ $("ai-news-days").addEventListener("change",()=>{days=Number($("ai-news-days").value)||7;render()});
  load();
 })();
