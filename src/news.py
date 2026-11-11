@@ -20,8 +20,8 @@ ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/"site"/"data"/"news.json"
 SOURCES=[
     ("OpenAI", "https://openai.com/news/rss.xml", "openai.com"),
-    ("OpenAI Release Notes", "https://openai.com/products/release-notes/rss.xml", "openai.com"),
-    ("Google DeepMind", "https://deepmind.google/blog/rss.xml", "deepmind.google"),
+    ("Google AI", "https://blog.google/innovation-and-ai/technology/ai/rss/", "blog.google"),
+    ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml", "huggingface.co"),
     ("GitHub Copilot", "https://github.blog/changelog/all.atom", "github.blog"),
 ]
 KEYWORDS=("model","gpt","chatgpt","gemini","claude","copilot","llm","reason","benchmark","agent","release","update","launch","api","coding","deepseek","performance","intelligence","frontier","openai","anthropic","google","search","vision","multimodal","code","inference","fast","efficien","tool")
@@ -80,7 +80,7 @@ def parse_feed(raw,name,source_url,domain,now):
         title=clean(field("title"),180)
         if not title:continue
         if name=="GitHub Copilot" and "copilot" not in title.lower():continue
-        if name=="Google DeepMind" and not any(k in title.lower() for k in KEYWORDS):continue
+        if name in ("Google AI","OpenAI","Hugging Face Blog") and not any(k in title.lower() for k in KEYWORDS):continue
         link=field("link")
         if is_atom:
             for atom_link in node.findall("a:link",NAMESPACE):
@@ -88,7 +88,7 @@ def parse_feed(raw,name,source_url,domain,now):
                     link=atom_link.attrib.get("href","");break
         if not allowed_link(link,domain):continue
         date=date_of(field("updated") or field("published") or field("pubDate"))
-        if not date or date>now+dt.timedelta(days=1) or date<now-dt.timedelta(days=21):continue
+        if not date or date>now or date<now-dt.timedelta(days=21):continue
         kind=category(title)
         description=field("summary") or field("description")
         result.append(dict(source=name,title=title,summary=describe(title,description,kind),
@@ -108,7 +108,7 @@ def main():
             feed=fetch(url)
             found=parse_feed(feed,name,url,domain,now)
             if not found:raise ValueError("No relevant recent feed entries")
-            items.extend(found)
+            items.extend(found[:10])
             states[name]="OK: %d recent links"%len(found)
         except Exception as ex:
             states[name]="ERROR: "+str(ex)[:160]
