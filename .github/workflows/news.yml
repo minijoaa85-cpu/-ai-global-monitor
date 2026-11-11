@@ -7,6 +7,9 @@ on:
       - 'src/news.py'
       - '.github/workflows/news.yml'
       - 'tests/test_news.py'
+      - 'site/news.js'
+      - 'site/index.html'
+      - 'site/v4.css'
   schedule:
     - cron: '55 0 * * *' # 09:55 KST daily, after weekly benchmark collection
 permissions:
