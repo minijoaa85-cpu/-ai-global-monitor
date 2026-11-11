@@ -6,7 +6,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 from news import parse_feed,allowed_link,category,clean,describe
 
-NOW=dt.datetime(2026,11,11,tzinfo=dt.timezone.utc)
+NOW=dt.datetime(2026,11,11,6,0,tzinfo=dt.timezone.utc)
 RSS=b"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>Publisher</title><item><title>Introducing GPT Test 7</title>
 <link>https://openai.com/news/example</link><description>New model with expanded tool support.</description>
