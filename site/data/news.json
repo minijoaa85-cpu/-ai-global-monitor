@@ -1,6 +1,56 @@
 {
-  "updated_at": "2026-11-13T01:53:34.476338+00:00",
+  "updated_at": "2026-11-14T01:48:15.547791+00:00",
   "items": [
+    {
+      "source": "GitHub Copilot",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in December",
+      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) o…",
+      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "category": "업데이트",
+      "published_at": "2026-11-13T20:56:18+00:00",
+      "published_day": "2026-11-13"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Gemini 4 Hydrogen in GitHub Copilot",
+      "summary": "Gemini 4 Hydrogen, Google’s latest Flash model, is now generally available in GitHub Copilot. It is designed for fast, efficient agentic coding, tool use, and m…",
+      "summary_ko": "GitHub Copilot에서 Gemini 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+      "category": "신모델·출시",
+      "published_at": "2026-11-13T19:15:11+00:00",
+      "published_day": "2026-11-13"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "GitHub Enterprise Server support in the GitHub Copilot app",
+      "summary": "You can now bring your work on GitHub Enterprise Server (GHES) into the GitHub Copilot app. Add your GHES account to work with remote repositories, issues, and…",
+      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+      "category": "업데이트",
+      "published_at": "2026-11-13T18:43:56+00:00",
+      "published_day": "2026-11-13"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Introducing ChatGPT Wallet",
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "category": "신모델·출시",
+      "published_at": "2026-11-13T15:00:00+00:00",
+      "published_day": "2026-11-13"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their ju…",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "category": "연구·동향",
+      "published_at": "2026-11-13T08:00:00+00:00",
+      "published_day": "2026-11-13"
+    },
     {
       "source": "OpenAI",
       "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
@@ -192,16 +242,6 @@
       "published_day": "2026-11-10"
     },
     {
-      "source": "OpenAI",
-      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
-      "summary": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/cogent-security",
-      "category": "연구·동향",
-      "published_at": "2026-11-10T00:00:00+00:00",
-      "published_day": "2026-11-10"
-    },
-    {
       "source": "Hugging Face Blog",
       "title": "Pay for Hugging Face Hub with your Google Cloud Account",
       "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
@@ -220,26 +260,6 @@
       "category": "연구·동향",
       "published_at": "2026-11-10T00:00:00+00:00",
       "published_day": "2026-11-10"
-    },
-    {
-      "source": "GitHub Copilot",
-      "title": "Claude Fable 5.2 in GitHub Copilot",
-      "summary": "Claude Fable 5.2, Anthropic’s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large…",
-      "summary_ko": "GitHub Copilot에서 Claude 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
-      "category": "신모델·출시",
-      "published_at": "2026-11-09T22:48:07+00:00",
-      "published_day": "2026-11-09"
-    },
-    {
-      "source": "OpenAI",
-      "title": "ChatGPT Enterprise now available in AWS Marketplace",
-      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationship…",
-      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "category": "신모델·출시",
-      "published_at": "2026-11-09T19:00:00+00:00",
-      "published_day": "2026-11-09"
     },
     {
       "source": "Google AI",
@@ -296,7 +316,7 @@
     "OpenAI": "OK: 43 recent links",
     "Google AI": "OK: 6 recent links",
     "Hugging Face Blog": "OK: 12 recent links",
-    "GitHub Copilot": "OK: 3 recent links"
+    "GitHub Copilot": "OK: 5 recent links"
   },
   "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
   "note": "These releases can inform future rankings but are NOT performance forecasts."
