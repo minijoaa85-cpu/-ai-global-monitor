@@ -1,6 +1,16 @@
 {
-  "updated_at": "2026-11-15T01:51:13.378465+00:00",
+  "updated_at": "2026-11-16T02:12:41.970905+00:00",
   "items": [
+    {
+      "source": "OpenAI",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "category": "연구·동향",
+      "published_at": "2026-11-15T22:00:01+00:00",
+      "published_day": "2026-11-15"
+    },
     {
       "source": "GitHub Copilot",
       "title": "Upcoming deprecation of selected GitHub Copilot models in December",
@@ -232,16 +242,6 @@
       "published_day": "2026-11-10"
     },
     {
-      "source": "OpenAI",
-      "title": "Work at the Frontier: AI’s effect on freelance work",
-      "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/ai-effect-on-freelance-work",
-      "category": "연구·동향",
-      "published_at": "2026-11-10T07:00:00+00:00",
-      "published_day": "2026-11-10"
-    },
-    {
       "source": "Hugging Face Blog",
       "title": "Pay for Hugging Face Hub with your Google Cloud Account",
       "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
@@ -313,7 +313,7 @@
     }
   ],
   "sources": {
-    "OpenAI": "OK: 43 recent links",
+    "OpenAI": "OK: 44 recent links",
     "Google AI": "OK: 6 recent links",
     "Hugging Face Blog": "OK: 12 recent links",
     "GitHub Copilot": "OK: 5 recent links"
