@@ -1,6 +1,96 @@
 {
-  "updated_at": "2026-11-16T02:12:41.970905+00:00",
+  "updated_at": "2026-11-17T01:57:32.084019+00:00",
   "items": [
+    {
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot weekly releases — November 9",
+      "summary": "This week, bring GitHub Enterprise Server repositories into the Copilot app and see which agent sessions need you first in VS Code. You can also try two new mod…",
+      "summary_ko": "GitHub Copilot에서 Copilot 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+      "category": "신모델·출시",
+      "published_at": "2026-11-16T21:47:53+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot models deprecated on November 16, 2026",
+      "summary": "As of today, November 16, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and ag…",
+      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+      "category": "업데이트",
+      "published_at": "2026-11-16T20:27:38+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/strengthening-online-child-safety",
+      "category": "연구·동향",
+      "published_at": "2026-11-16T17:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+      "summary_ko": "OpenAI에서 발표한 GPT 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/science-at-the-frontier",
+      "category": "연구·동향",
+      "published_at": "2026-11-16T12:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "summary": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
+      "summary_ko": "OpenAI에서 AI 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "category": "신모델·출시",
+      "published_at": "2026-11-16T09:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "category": "연구·동향",
+      "published_at": "2026-11-16T06:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "summary_ko": "OpenAI에서 발표한 GPT 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "category": "연구·동향",
+      "published_at": "2026-11-16T06:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "OpenAI",
+      "title": "The King’s Trust and OpenAI launch £1m partnership",
+      "summary": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "summary_ko": "OpenAI에서 AI 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/the-kings-trust-and-openai",
+      "category": "신모델·출시",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/openrouter",
+      "category": "연구·동향",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "published_day": "2026-11-16"
+    },
     {
       "source": "OpenAI",
       "title": "A step toward defining the Standard Model on a lattice",
@@ -92,36 +182,6 @@
       "published_day": "2026-11-12"
     },
     {
-      "source": "OpenAI",
-      "title": "Gondola doubles revenue as its team builds more with Codex",
-      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/business/customer-stories/gondola",
-      "category": "연구·동향",
-      "published_at": "2026-11-12T12:00:00+00:00",
-      "published_day": "2026-11-12"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Holiday Extras is rethinking what it can build with Codex",
-      "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
-      "category": "연구·동향",
-      "published_at": "2026-11-12T09:30:00+00:00",
-      "published_day": "2026-11-12"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Supporting research on AI and children’s safety",
-      "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/children-first-declaration",
-      "category": "연구·동향",
-      "published_at": "2026-11-12T00:00:00+00:00",
-      "published_day": "2026-11-12"
-    },
-    {
       "source": "Hugging Face Blog",
       "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
       "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
@@ -142,16 +202,6 @@
       "published_day": "2026-11-11"
     },
     {
-      "source": "OpenAI",
-      "title": "ChatGPT Plus for veterans and servicemembers",
-      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
-      "summary_ko": "OpenAI에서 발표한 GPT 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-      "category": "연구·동향",
-      "published_at": "2026-11-11T08:00:00+00:00",
-      "published_day": "2026-11-11"
-    },
-    {
       "source": "Hugging Face Blog",
       "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
       "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
@@ -159,16 +209,6 @@
       "url": "https://huggingface.co/blog/qvac/botpsy",
       "category": "연구·동향",
       "published_at": "2026-11-11T05:01:16+00:00",
-      "published_day": "2026-11-11"
-    },
-    {
-      "source": "GitHub Copilot",
-      "title": "GitHub App support for Enterprise Copilot seat management",
-      "summary": "Enterprise GitHub Apps can now call the enterprise-level Copilot seat management APIs to control which users and enterprise teams are assigned Copilot seats. Th…",
-      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
-      "url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
-      "category": "업데이트",
-      "published_at": "2026-11-11T00:18:17+00:00",
       "published_day": "2026-11-11"
     },
     {
@@ -180,16 +220,6 @@
       "category": "연구·동향",
       "published_at": "2026-11-11T00:00:00+00:00",
       "published_day": "2026-11-11"
-    },
-    {
-      "source": "GitHub Copilot",
-      "title": "Gemini 4 Carbon in GitHub Copilot",
-      "summary": "Gemini 4 Carbon, Google’s latest model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks, with a fo…",
-      "summary_ko": "GitHub Copilot에서 Gemini 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
-      "category": "신모델·출시",
-      "published_at": "2026-11-10T20:35:41+00:00",
-      "published_day": "2026-11-10"
     },
     {
       "source": "Google AI",
@@ -219,26 +249,6 @@
       "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
       "category": "신모델·출시",
       "published_at": "2026-11-10T13:00:00+00:00",
-      "published_day": "2026-11-10"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Introducing Businesses in ChatGPT",
-      "summary": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
-      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://openai.com/index/introducing-businesses-chatgpt",
-      "category": "신모델·출시",
-      "published_at": "2026-11-10T10:00:00+00:00",
-      "published_day": "2026-11-10"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Singapore Airlines elevates travel & work with OpenAI technology",
-      "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris…",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/singapore-airlines-travel-work",
-      "category": "연구·동향",
-      "published_at": "2026-11-10T08:00:00+00:00",
       "published_day": "2026-11-10"
     },
     {
@@ -300,22 +310,12 @@
       "category": "연구·동향",
       "published_at": "2026-11-03T00:00:00+00:00",
       "published_day": "2026-11-03"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "title": "Granite Switch 4.1.1 — Update models like you update software",
-      "summary": "서비스 또는 모델 기능 변경 관련 발표입니다. 변경 범위는 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog의 AI 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
-      "category": "업데이트",
-      "published_at": "2026-10-29T13:37:07+00:00",
-      "published_day": "2026-10-29"
     }
   ],
   "sources": {
-    "OpenAI": "OK: 44 recent links",
+    "OpenAI": "OK: 43 recent links",
     "Google AI": "OK: 6 recent links",
-    "Hugging Face Blog": "OK: 12 recent links",
+    "Hugging Face Blog": "OK: 13 recent links",
     "GitHub Copilot": "OK: 5 recent links"
   },
   "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
