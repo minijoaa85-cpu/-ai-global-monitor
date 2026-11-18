@@ -1,6 +1,66 @@
 {
-  "updated_at": "2026-11-17T01:57:32.084019+00:00",
+  "updated_at": "2026-11-18T02:01:58.425592+00:00",
   "items": [
+    {
+      "source": "OpenAI",
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "category": "신모델·출시",
+      "published_at": "2026-11-17T17:45:00+00:00",
+      "published_day": "2026-11-17"
+    },
+    {
+      "source": "Google AI",
+      "title": "Put Gemini to work for you",
+      "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on you…",
+      "summary_ko": "Google AI에서 Gemini 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+      "category": "신모델·출시",
+      "published_at": "2026-11-17T17:00:00+00:00",
+      "published_day": "2026-11-17"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Introducing ChatGPT for Sales",
+      "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward…",
+      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "category": "신모델·출시",
+      "published_at": "2026-11-17T08:00:00+00:00",
+      "published_day": "2026-11-17"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Control where GitHub Copilot customizations come from",
+      "summary": "As an enterprise administrator, you can now require selected GitHub Copilot customizations to come from plugins or managed settings, rather than standalone user…",
+      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from",
+      "category": "업데이트",
+      "published_at": "2026-11-17T01:19:12+00:00",
+      "published_day": "2026-11-17"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Astra for Law leads in legal intelligence",
+      "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "category": "연구·동향",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "published_day": "2026-11-17"
+    },
+    {
+      "source": "OpenAI",
+      "title": "Introducing OpenAI for Chile",
+      "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications…",
+      "summary_ko": "OpenAI에서 AI 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "category": "신모델·출시",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "published_day": "2026-11-17"
+    },
     {
       "source": "GitHub Copilot",
       "title": "GitHub Copilot weekly releases — November 9",
@@ -53,20 +113,20 @@
     },
     {
       "source": "OpenAI",
-      "title": "Advancing computer-use agents for healthcare teams",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "summary_ko": "OpenAI에서 발표한 GPT 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "category": "연구·동향",
       "published_at": "2026-11-16T06:00:00+00:00",
       "published_day": "2026-11-16"
     },
     {
       "source": "OpenAI",
-      "title": "More ways to move care forward with ChatGPT for Healthcare",
-      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-      "summary_ko": "OpenAI에서 발표한 GPT 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "category": "연구·동향",
       "published_at": "2026-11-16T06:00:00+00:00",
       "published_day": "2026-11-16"
@@ -92,16 +152,6 @@
       "published_day": "2026-11-16"
     },
     {
-      "source": "OpenAI",
-      "title": "A step toward defining the Standard Model on a lattice",
-      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-      "category": "연구·동향",
-      "published_at": "2026-11-15T22:00:01+00:00",
-      "published_day": "2026-11-15"
-    },
-    {
       "source": "GitHub Copilot",
       "title": "Upcoming deprecation of selected GitHub Copilot models in December",
       "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) o…",
@@ -113,16 +163,6 @@
     },
     {
       "source": "GitHub Copilot",
-      "title": "Gemini 4 Hydrogen in GitHub Copilot",
-      "summary": "Gemini 4 Hydrogen, Google’s latest Flash model, is now generally available in GitHub Copilot. It is designed for fast, efficient agentic coding, tool use, and m…",
-      "summary_ko": "GitHub Copilot에서 Gemini 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
-      "category": "신모델·출시",
-      "published_at": "2026-11-13T19:15:11+00:00",
-      "published_day": "2026-11-13"
-    },
-    {
-      "source": "GitHub Copilot",
       "title": "GitHub Enterprise Server support in the GitHub Copilot app",
       "summary": "You can now bring your work on GitHub Enterprise Server (GHES) into the GitHub Copilot app. Add your GHES account to work with remote repositories, issues, and…",
       "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
@@ -130,36 +170,6 @@
       "category": "업데이트",
       "published_at": "2026-11-13T18:43:56+00:00",
       "published_day": "2026-11-13"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Introducing ChatGPT Wallet",
-      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-      "summary_ko": "OpenAI에서 GPT 관련 모델·제품 출시 또는 제공 확대 소식을 발표했습니다. 변경 범위와 제공 시점은 원문을 확인하세요.",
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "category": "신모델·출시",
-      "published_at": "2026-11-13T15:00:00+00:00",
-      "published_day": "2026-11-13"
-    },
-    {
-      "source": "OpenAI",
-      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their ju…",
-      "summary_ko": "OpenAI에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://openai.com/business/customer-stories/shield",
-      "category": "연구·동향",
-      "published_at": "2026-11-13T08:00:00+00:00",
-      "published_day": "2026-11-13"
-    },
-    {
-      "source": "OpenAI",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures…",
-      "summary_ko": "OpenAI의 AI 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "category": "업데이트",
-      "published_at": "2026-11-12T20:00:00+00:00",
-      "published_day": "2026-11-12"
     },
     {
       "source": "Hugging Face Blog",
@@ -313,9 +323,9 @@
     }
   ],
   "sources": {
-    "OpenAI": "OK: 43 recent links",
-    "Google AI": "OK: 6 recent links",
-    "Hugging Face Blog": "OK: 13 recent links",
+    "OpenAI": "OK: 46 recent links",
+    "Google AI": "OK: 7 recent links",
+    "Hugging Face Blog": "OK: 12 recent links",
     "GitHub Copilot": "OK: 5 recent links"
   },
   "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
