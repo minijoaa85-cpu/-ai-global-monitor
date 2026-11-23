@@ -1,20 +1,20 @@
 {
   "version": "4.0",
-  "week": "2026-11-16",
-  "collected_at": "2026-11-16T01:38:27.884255+00:00",
+  "week": "2026-11-23",
+  "collected_at": "2026-11-23T01:29:32.893369+00:00",
   "sources": {
-    "Arena / text": "ERROR: HTTP Error 501: Not Implemented (retained 100 stale rows)",
+    "Arena / text": "OK: 100 fresh rows",
     "Arena / text_style_control": "OK: 100 fresh rows",
     "Arena / webdev": "OK: 100 fresh rows",
-    "Arena / search": "OK: 42 fresh rows",
+    "Arena / search": "OK: 45 fresh rows",
     "Arena / vision": "OK: 100 fresh rows",
     "Arena / document": "OK: 46 fresh rows",
-    "Arena / agent": "OK: 59 fresh rows",
+    "Arena / agent": "OK: 68 fresh rows",
     "Artificial Analysis": "INTERNAL ONLY: Free API redistribution restricted; not published",
     "LiveBench": "NOT ENABLED: license/schema verification pending"
   },
-  "published_records": 547,
-  "fresh_records": 447,
-  "stale_records": 100,
+  "published_records": 559,
+  "fresh_records": 559,
+  "stale_records": 0,
   "license_note": "Arena CC BY 4.0; each leaderboard is a partial sample (up to 100 rows) of the latest split. AA Free API is not published."
 }
