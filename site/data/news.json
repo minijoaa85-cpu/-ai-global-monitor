@@ -1,6 +1,36 @@
 {
-  "updated_at": "2026-11-25T02:07:00.091450+00:00",
+  "updated_at": "2026-11-26T02:05:34.812862+00:00",
   "items": [
+    {
+      "source": "Hugging Face Blog",
+      "title": "Where scientists draw the line on AI agents",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "category": "연구·동향",
+      "published_at": "2026-11-25T18:52:55+00:00",
+      "published_day": "2026-11-25"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "An Indic Voice Agent with CUGA",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "category": "연구·동향",
+      "published_at": "2026-11-25T10:22:09+00:00",
+      "published_day": "2026-11-25"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+      "category": "연구·동향",
+      "published_at": "2026-11-25T00:00:00+00:00",
+      "published_day": "2026-11-25"
+    },
     {
       "source": "Google AI",
       "title": "How Gemini is changing the game for Golden State's organization and fans.",
@@ -183,16 +213,6 @@
     },
     {
       "source": "Hugging Face Blog",
-      "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
-      "category": "연구·동향",
-      "published_at": "2026-11-18T15:00:23+00:00",
-      "published_day": "2026-11-18"
-    },
-    {
-      "source": "Hugging Face Blog",
       "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
       "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
       "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
@@ -232,16 +252,6 @@
       "published_day": "2026-11-16"
     },
     {
-      "source": "Hugging Face Blog",
-      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
-      "category": "연구·동향",
-      "published_at": "2026-11-12T19:07:35+00:00",
-      "published_day": "2026-11-12"
-    },
-    {
       "source": "Google AI",
       "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
       "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
@@ -249,16 +259,6 @@
       "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
       "category": "신모델·출시",
       "published_at": "2026-11-12T18:00:00+00:00",
-      "published_day": "2026-11-12"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/3d-lora-finetuning",
-      "category": "연구·동향",
-      "published_at": "2026-11-12T00:00:00+00:00",
       "published_day": "2026-11-12"
     },
     {
@@ -303,9 +303,9 @@
     }
   ],
   "sources": {
-    "OpenAI": "OK: 50 recent links",
+    "OpenAI": "OK: 48 recent links",
     "Google AI": "OK: 11 recent links",
-    "Hugging Face Blog": "OK: 15 recent links",
+    "Hugging Face Blog": "OK: 16 recent links",
     "GitHub Copilot": "ERROR: No relevant recent feed entries"
   },
   "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
