@@ -1,6 +1,46 @@
 {
-  "updated_at": "2026-11-26T02:05:34.812862+00:00",
+  "updated_at": "2026-11-27T02:08:57.231233+00:00",
   "items": [
+    {
+      "source": "Hugging Face Blog",
+      "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "summary": "AI 평가 및 성능 관련 발표입니다. 방법론과 근거는 원문에서 확인하세요.",
+      "summary_ko": "Hugging Face Blog의 Llama 관련 평가·성능 관련 발표입니다. 실제 순위 및 비교 근거는 원문에서 확인하세요.",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "category": "평가·성능",
+      "published_at": "2026-11-26T11:37:17+00:00",
+      "published_day": "2026-11-26"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "category": "연구·동향",
+      "published_at": "2026-11-26T05:05:36+00:00",
+      "published_day": "2026-11-26"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
+      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "category": "연구·동향",
+      "published_at": "2026-11-26T00:00:00+00:00",
+      "published_day": "2026-11-26"
+    },
+    {
+      "source": "GitHub Copilot",
+      "title": "Copilot code review billing will default to the organization",
+      "summary": "If you haven’t chosen how to bill Copilot code review for members with a Copilot license, those reviews will be billed to your organization starting December 30…",
+      "summary_ko": "GitHub Copilot의 Copilot 관련 기능·지원 범위 업데이트 소식입니다. 구체적인 변경 사항은 원문을 확인하세요.",
+      "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization",
+      "category": "업데이트",
+      "published_at": "2026-11-25T22:19:23+00:00",
+      "published_day": "2026-11-25"
+    },
     {
       "source": "Hugging Face Blog",
       "title": "Where scientists draw the line on AI agents",
@@ -212,26 +252,6 @@
       "published_day": "2026-11-18"
     },
     {
-      "source": "Hugging Face Blog",
-      "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/moe-expert-streaming",
-      "category": "연구·동향",
-      "published_at": "2026-11-18T00:00:00+00:00",
-      "published_day": "2026-11-18"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/rumble-2-flash",
-      "category": "연구·동향",
-      "published_at": "2026-11-18T00:00:00+00:00",
-      "published_day": "2026-11-18"
-    },
-    {
       "source": "Google AI",
       "title": "Put Gemini to work for you",
       "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on you…",
@@ -240,16 +260,6 @@
       "category": "신모델·출시",
       "published_at": "2026-11-17T17:00:00+00:00",
       "published_day": "2026-11-17"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
-      "summary": "AI 업계 공식 소식입니다. 자세한 내용은 원문을 확인하세요.",
-      "summary_ko": "Hugging Face Blog에서 발표한 AI 관련 연구·산업 동향입니다. 세부 내용과 근거는 원문을 확인하세요.",
-      "url": "https://huggingface.co/blog/openrouter",
-      "category": "연구·동향",
-      "published_at": "2026-11-16T00:00:00+00:00",
-      "published_day": "2026-11-16"
     },
     {
       "source": "Google AI",
@@ -303,10 +313,10 @@
     }
   ],
   "sources": {
-    "OpenAI": "OK: 48 recent links",
-    "Google AI": "OK: 11 recent links",
-    "Hugging Face Blog": "OK: 16 recent links",
-    "GitHub Copilot": "ERROR: No relevant recent feed entries"
+    "OpenAI": "OK: 44 recent links",
+    "Google AI": "OK: 10 recent links",
+    "Hugging Face Blog": "OK: 19 recent links",
+    "GitHub Copilot": "OK: 1 recent links"
   },
   "policy": "Source titles and short feed excerpts only; open the publisher URL for full details.",
   "note": "These releases can inform future rankings but are NOT performance forecasts."
