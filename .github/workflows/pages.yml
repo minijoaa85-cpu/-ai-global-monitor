@@ -15,7 +15,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: ${{ vars.ENABLE_PUBLIC_PAGES == 'true' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
