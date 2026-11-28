@@ -60,7 +60,7 @@ def digest(history, news, status, now=None):
     previous=snapshots[-2] if len(snapshots)>=2 else None
     old=previous.get("records",[]) if previous else []
     changes=matched_changes(old,records)
-    total_compared=len(changes)
+    total_changed=len(changes)
     categories=Counter()
     recent=[]
     for x in news.get("items",[]):
@@ -85,7 +85,7 @@ def digest(history, news, status, now=None):
         if changes:
             up=sum(1 for x in changes if x["delta"]>0)
             down=sum(1 for x in changes if x["delta"]<0)
-            remarks.append(f"비교 가능한 동일 모델·평가 쌍 {total_compared}건 중 점수 상승 {up}건, 하락 {down}건입니다. 점수 변화만으로 통계적 우위를 판단할 수 없습니다.")
+            remarks.append(f"동일 모델·평가 조건에서 확인된 점수 변동은 상승 {up}건, 하락 {down}건(합계 {total_changed}건)입니다. 점수 변화만으로 통계적 우위를 판단할 수 없습니다.")
         else:
             remarks.append("직전 주와 조건이 일치하는 점수 변화가 없어 상승·하락 판단을 보류했습니다.")
     else:
