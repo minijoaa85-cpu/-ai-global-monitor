@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1222"><meta name="description" content="공식 공개 데이터 기반 글로벌 생성형 AI 평가 분석 대시보드"><title>AI Observatory · Global benchmark V4.0</title><link rel="stylesheet" href="./v4.css"><link rel="stylesheet" href="./history.css"></head>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1222"><meta name="description" content="공식 공개 데이터 기반 글로벌 생성형 AI 평가 분석 대시보드"><title>AI Observatory · Global benchmark V4.0</title><link rel="stylesheet" href="./v4.css"><link rel="stylesheet" href="./history.css"><link rel="stylesheet" href="./weekly-pulse.css"></head>
 <body><header class="topbar"><div class="brand"><span class="glyph">◈</span><div><b>AI OBSERVATORY</b><small>GLOBAL MODEL INTELLIGENCE</small></div></div><div class="headright"><button type="button" class="outline" data-history-open aria-expanded="false" aria-controls="history-drawer">History · V4.2</button><a href="weekly-report.html" class="outline">주간 리포트 ↗</a><button id="refresh" class="outline">↻ 새로고침</button></div></header>
 <main><div class="eyebrow"><span class="dot"></span> INDEPENDENT BENCHMARK INTELLIGENCE <span class="sep">/</span> V4.2</div><h1>글로벌 AI 성능 관측소</h1><p class="subtitle">공식 공개 평가를 기준으로 AI 모델의 <strong>순위, 변화, 불확실성, 비용 효율</strong>을 분석합니다. 서로 다른 평가의 점수는 혼합하지 않습니다.</p>
+<section class="weekly-pulse" id="weekly-pulse" aria-label="이번 주 AI 핵심 한줄 평">
+<div class="weekly-pulse-head"><span class="weekly-pulse-kicker">WEEKLY AI PULSE · 주간 한줄 평</span><span id="weekly-pulse-date" class="weekly-pulse-date">공식 평가 데이터 확인 중</span></div>
+<h2 id="weekly-pulse-headline">이번 주 AI 성능과 업데이트 동향을 분석 중입니다.</h2>
+<div class="weekly-pulse-insights" id="weekly-pulse-insights"><p>데이터를 읽는 중입니다.</p></div>
+<div class="weekly-pulse-bottom"><span id="weekly-pulse-quality">공식 리더보드와 발표 소식만으로 판단합니다.</span><span><a id="weekly-pulse-benchmark-link" href="https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset" target="_blank" rel="noopener noreferrer">평가 근거 ↗</a> · <a href="#ai-news-board">이번 주 뉴스 ↗</a></span></div>
+</section>
 <div id="notice" class="notice" role="status">데이터를 확인하고 있습니다.</div>
 <div class="metrics"><article class="metric"><small>평가 모델</small><strong id="stat-models">—</strong><span>고유 모델 명칭 기준</span></article><article class="metric"><small>공개 측정 기록</small><strong id="stat-records">—</strong><span>출처·부문별 레코드</span></article><article class="metric"><small>연결된 평가 부문</small><strong id="stat-boards">—</strong><span>Arena 공식 리더보드</span></article><article class="metric"><small>마지막 확인 (KST)</small><strong id="stat-updated" class="date">—</strong><span>공식 발표일과 별개</span></article></div>
 <section class="panel"><div class="sectionhead"><div><div class="eyebrow">01 / RANKING</div><h2>공식 리더보드 TOP 10</h2><p>기관이 발표한 순위를 우선 사용합니다. 높은 점수가 반드시 통계적으로 유의한 차이를 뜻하지는 않습니다.</p></div><button id="export" class="outline">CSV 저장 ↓</button></div>
@@ -22,4 +28,4 @@
 <div id="history-status">개발 이력을 불러오는 중</div><div id="history-list" class="history-list"></div>
 <p class="history-note">개발 History는 성능 데이터의 주간 시계열과 별도로 관리합니다. 근거는 GitHub 구현 기록이며, PDF/PPT와 화면은 같은 JSON에서 생성됩니다.</p>
 </aside>
-<script defer src="./v4.js"></script><script defer src="./news.js"></script><script defer src="./history.js"></script></body></html>
+<script defer src="./v4.js"></script><script defer src="./news.js"></script><script defer src="./history.js"></script><script defer src="./weekly-pulse.js"></script></body></html>
