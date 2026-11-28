@@ -23,7 +23,7 @@ jobs:
     timeout-minutes: 10
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://minijoaa85-cpu.github.io/-ai-global-monitor/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -58,4 +58,11 @@ jobs:
         with:
           path: ./site
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Pause before Pages retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 20
+      - name: Retry Pages publish if artifact metadata temporarily fails
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
