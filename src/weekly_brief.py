@@ -85,7 +85,14 @@ def digest(history, news, status, now=None):
         if changes:
             up=sum(1 for x in changes if x["delta"]>0)
             down=sum(1 for x in changes if x["delta"]<0)
-            remarks.append(f"동일 모델·평가 조건에서 확인된 점수 변동은 상승 {up}건, 하락 {down}건(합계 {total_changed}건)입니다. 점수 변화만으로 통계적 우위를 판단할 수 없습니다.")
+            relevant=[x for x in changes if isinstance(x.get("rank_change"),int) and x["rank_change"]!=0]
+            relevant.sort(key=lambda x:(x["board"]!="text",-abs(x["rank_change"])))
+            exemplar=relevant[0] if relevant else None
+            example=(f" 예시: {LABELS.get(exemplar['board'],exemplar['board'])} 영역에서 {exemplar['model'][:42]} "
+                     f"공식 순위 {'상승' if exemplar['rank_change']>0 else '하락'} {abs(exemplar['rank_change'])}계단."
+                     if exemplar else "")
+            remarks.append(f"동일 평가 조건의 점수 상승 {up}건·하락 {down}건(변동 {total_changed}건)."
+                           +example+" 표본 제한과 신뢰구간을 함께 확인해야 합니다.")
         else:
             remarks.append("직전 주와 조건이 일치하는 점수 변화가 없어 상승·하락 판단을 보류했습니다.")
     else:
