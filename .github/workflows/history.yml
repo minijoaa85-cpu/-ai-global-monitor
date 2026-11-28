@@ -1,0 +1,48 @@
+name: Publish version History with PDF and PPT
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'site/version_history.json'
+      - 'site/history.js'
+      - 'site/history.css'
+      - 'site/index.html'
+      - 'scripts/build_history_slides.py'
+      - 'tests/test_version_history.py'
+      - '.github/workflows/history.yml'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate history and create PDF/PPT
+        run: |
+          python -m pip install --disable-pip-version-check python-pptx reportlab
+          python -m unittest discover -s tests -p test_version_history.py -v
+          node --check site/history.js
+          node --check site/news.js
+          node --check site/v4.js
+          python scripts/build_history_slides.py
+          test -s site/docs/ai-observatory-version-history.pdf
+          test -s site/docs/ai-observatory-version-history.pptx
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+      - id: deployment
+        uses: actions/deploy-pages@v4
