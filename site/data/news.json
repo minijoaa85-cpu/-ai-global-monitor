@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T02:08:57.231233+00:00",
+  "updated_at": "2026-11-28T00:16:43.493285+00:00",
   "items": [
     {
       "source": "Hugging Face Blog",
@@ -313,7 +313,7 @@
     }
   ],
   "sources": {
-    "OpenAI": "OK: 44 recent links",
+    "OpenAI": "OK: 43 recent links",
     "Google AI": "OK: 10 recent links",
     "Hugging Face Blog": "OK: 19 recent links",
     "GitHub Copilot": "OK: 1 recent links"
