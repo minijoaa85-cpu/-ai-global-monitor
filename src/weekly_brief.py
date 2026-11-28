@@ -41,13 +41,13 @@ def matched_changes(old_rows,new_rows):
         if not before:continue
         if not isinstance(r.get("score"),(int,float)) or not isinstance(before.get("score"),(int,float)):continue
         if before.get("rating_method")!=r.get("rating_method"):continue
-        diff=r["score"]-before["score"]
+        diff=round(r["score"]-before["score"],3)
         if not diff:continue
         rank1=before.get("rank")
         rank2=r.get("rank")
         rank_change=(rank1-rank2) if isinstance(rank1,int) and isinstance(rank2,int) else None
         result.append({"model":str(r.get("model") or "Unknown"),"board":str(r.get("benchmark") or ""),
-                       "category":str(r.get("category") or "overall"),"delta":round(diff,3),
+                       "category":str(r.get("category") or "overall"),"delta":diff,
                        "rank_change":rank_change,"unit":str(r.get("unit") or "points")})
     return result
 
