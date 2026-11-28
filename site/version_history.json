@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "product": "AI Global Observatory",
-  "latest_version": "V4.2",
+  "latest_version": "V4.3",
   "updated_on": "2026-11-28",
   "source_policy": "Verified repository commit history and current implementation; excludes speculative features or incomplete integration claims.",
   "entries": [
@@ -64,6 +64,16 @@
       "changes": "Version History 사이드 패널, 버전 그룹 필터, WHY·WHAT·VALUE 상세, 단일 JSON 기반 PDF·PPT 생성 및 배포 검증 추가",
       "value": "새 기능 배포와 히스토리/공유 문서의 불일치 방지 및 장기 개발 관리",
       "ref": "https://github.com/minijoaa85-cpu/-ai-global-monitor/actions"
+    },
+    {
+      "version": "V4.3",
+      "title": "Weekly AI Pulse · 이번 주 한줄 평",
+      "date": "2026-11-28",
+      "summary": "상단 AI 한줄 평과 실제 주간 평가 변화·공식 뉴스 관심 분야 자동 요약",
+      "background": "긴 순위표와 뉴스 목록을 모두 읽지 않고도 그 주의 AI 모델 경쟁 및 기술 관심사를 간단하게 확인할 필요가 있었음",
+      "changes": "동일 조건 Arena 점수 변화, 최근 7일 공식 기사 분류와 출처를 조합한 근거 기반 한국어 요약, 데이터 부족 및 갱신 시점 안내를 최상단에 추가",
+      "value": "매일 뉴스 갱신과 매주 평가 갱신 시 핵심 메시지를 빠르게 파악하고 상세 근거로 이동",
+      "ref": "https://github.com/minijoaa85-cpu/-ai-global-monitor/blob/main/src/weekly_brief.py"
     }
   ]
 }
