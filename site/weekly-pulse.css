@@ -1,0 +1,10 @@
+.weekly-pulse{margin:20px 0 22px;border:1px solid #517398;border-radius:18px;padding:23px 25px;background:linear-gradient(115deg,#1b3755 0%,#152841 60%,#162238 100%);box-shadow:0 8px 30px #08132430}
+.weekly-pulse-head,.weekly-pulse-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px}
+.weekly-pulse-kicker{font-size:11px;font-weight:800;letter-spacing:.11em;color:#a7d4ff}
+.weekly-pulse-date{font-size:12px;color:#acbfd6}
+.weekly-pulse h2{font-size:clamp(17px,2.3vw,24px);line-height:1.5;letter-spacing:-.02em;margin:12px 0 17px;color:#f1f7ff}
+.weekly-pulse-insights{display:grid;gap:8px}.weekly-pulse-insights p{margin:0;padding:10px 12px;border-left:3px solid #80b9f4;background:#10273eaa;border-radius:0 8px 8px 0;font-size:13px;color:#d2dfef;line-height:1.55}
+.weekly-pulse-bottom{border-top:1px solid #3b5575;padding-top:13px;margin-top:17px;color:#a4bbd4;font-size:11px}
+.weekly-pulse-bottom a{color:#a9d6ff;text-decoration:none}.weekly-pulse-bottom a:hover{text-decoration:underline}
+.weekly-pulse-quality{color:#facba0}
+@media(max-width:600px){.weekly-pulse{padding:16px;margin:15px 0 20px}.weekly-pulse h2{margin:12px 0 14px}.weekly-pulse-insights p{font-size:12px}.weekly-pulse-bottom{align-items:flex-start}}
