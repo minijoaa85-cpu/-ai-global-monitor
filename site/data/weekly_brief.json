@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T00:49:13.777296+00:00",
+  "generated_at": "2026-11-28T00:49:51.368887+00:00",
   "benchmark_week": "2026-11-23",
   "latest_model_count": 216,
   "benchmark_records": 559,
@@ -9,7 +9,7 @@
   "headline": "이번 주는 연구·동향 소식이 두드러졌으며, Arena 7개 평가 영역의 최신 공개 점수를 확인했습니다.",
   "insights": [
     "공식 링크 기준 최근 7일은 연구·동향 기사 12건이 가장 많이 수집됐습니다. 수집량은 업계 전체 관심도를 대표하지 않습니다.",
-    "동일 모델·평가 조건에서 확인된 점수 변동은 상승 162건, 하락 224건(합계 389건)입니다. 점수 변화만으로 통계적 우위를 판단할 수 없습니다.",
+    "동일 평가 조건의 점수 상승 162건·하락 224건(변동 389건). 예시: 에이전트 영역에서 Claude Haiku 5.5 (High) 공식 순위 하락 12계단. 표본 제한과 신뢰구간을 함께 확인해야 합니다.",
     "최근 공식 발표: Hugging Face Blog의 ‘Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon’ 관련 세부 사항은 원문을 확인하세요."
   ],
   "quality_flags": [],
